@@ -1,0 +1,396 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基础字体设置 */
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+/* 导航栏基础样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* 确保导航栏在最上层 */
+}
+
+/* 导航栏名称样式 */
+.nav-brand h1 {
+    font-size: 1.5rem;
+    font-family: '华文行楷', 'STXingkai', 'Microsoft YaHei', sans-serif;
+}
+
+/* 名称中的英文样式 */
+.nav-brand span {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* 导航链接容器样式 */
+.nav-links {
+    display: flex;
+    gap: 2rem; /* 链接之间的间距 */
+    z-index: 1001;
+}
+
+/* 导航链接样式 */
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: '华文行楷', 'STXingkai', 'Microsoft YaHei', sans-serif;
+    cursor: pointer;
+}
+
+/* 主要内容区域样式 */
+main {
+    min-height: 100vh;
+    padding-top: 70px; /* 为固定导航栏留出空间 */
+    background-image: url('./imgs/背景2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 背景固定，产生视差效果 */
+}
+
+/* 主要内容区域的遮罩层 */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩 */
+    z-index: 1;
+}
+
+/* 确保内容在遮罩层之上 */
+main > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 底部联系方式区域样式 */
+.contact-footer {
+    background-color: rgba(74, 74, 74, 0.95);
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* 联系方式容器样式 */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* 联系方式标题样式 */
+.contact-container h2 {
+    font-family: '华文行楷', 'STXingkai', 'Microsoft YaHei', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffd700; /* 金色 */
+}
+
+/* 联系方式项目容器样式 */
+.contact-items {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+/* 单个联系方式项目样式 */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* 联系方式悬停效果 */
+.contact-item:hover {
+    transform: translateY(-5px);
+    color: #ffd700;
+}
+
+/* 联系方式图标样式 */
+.contact-item i {
+    font-size: 1.5rem;
+}
+
+/* 页脚定位 */
+footer {
+    position: relative;
+    z-index: 3;
+}
+
+/* 当前激活的导航链接样式 */
+.nav-links a.active {
+    color: #ffd700;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* 内容容器样式 */
+.content-container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+/* 内容标题样式 */
+.content-container h1 {
+    font-family: '华文行楷', 'STXingkai', 'Microsoft YaHei', sans-serif;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* 首页按钮样式 */
+.home-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: '华文行楷', 'STXingkai', 'Microsoft YaHei', sans-serif;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
+}
+
+/* 首页按钮悬停效果 */
+.home-btn:hover {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+/* 导航栏左侧布局 */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* 欢迎语样式 */
+.welcome-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    font-style: italic;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+/* 内容布局样式 */
+.content-layout {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    min-height: 600px;
+}
+
+/* 照片框样式 */
+.photo-frame {
+    flex: 0 0 400px; /* 固定宽度 */
+    height: 550px;
+    border: 3px solid #4a4a4a;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 照片样式 */
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% center; /* 调整照片焦点位置 */
+    transition: transform 0.3s ease;
+}
+
+/* 照片悬停效果 */
+.photo:hover {
+    transform: scale(1.05); /* 放大效果 */
+}
+
+/* 文字内容区域样式 */
+.text-content {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 个人信息项目样式 */
+.info-item {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-family: '楷体', 'KaiTi', serif;
+}
+
+/* 信息标签样式 */
+.info-label {
+    font-weight: bold;
+    color: #4a4a4a;
+    font-family: '楷体', 'KaiTi', serif;
+    margin-right: 1rem;
+}
+
+/* 信息值样式 */
+.info-value {
+    color: #666;
+    font-family: '楷体', 'KaiTi', serif;
+}
+
+/* 座右铭样式 */
+.motto {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #eee; /* 分隔线 */
+}
+
+/* 座右铭文字样式 */
+.motto .info-value {
+    font-style: italic;
+    color: #4a4a4a;
+    font-size: 1.3rem;
+    font-family: '楷体', 'KaiTi', serif;
+}
+
+/* 响应式设计 */
+/* 平板设备 (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .content-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .photo-frame {
+        width: 80%;
+        flex: none;
+        height: 400px;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+
+    .welcome-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* 手机设备 (小于 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem 2%;
+    }
+
+    .nav-left {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .welcome-text {
+        position: static;
+        transform: none;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .photo-frame {
+        width: 100%;
+        height: 300px;
+    }
+
+    .content-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .info-item {
+        font-size: 1rem;
+    }
+
+    .contact-items {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .home-btn {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* 超小屏幕设备 (小于 480px) */
+@media screen and (max-width: 480px) {
+    .nav-brand h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-brand span {
+        font-size: 1rem;
+    }
+
+    .content-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-item {
+        font-size: 0.9rem;
+    }
+
+    .motto .info-value {
+        font-size: 1rem;
+    }
+}
+ 

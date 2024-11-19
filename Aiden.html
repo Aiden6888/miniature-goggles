@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 字符编码设置 -->
+    <meta charset="UTF-8">
+    <!-- 响应式视口设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 页面标题 -->
+    <title>Aiden的个人网页</title>
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 其他样式保持不变 */
+        .interests h2 {
+            font-size: 24px;
+        }
+        .interests ul {
+            list-style: none;  /* 移除列表项标记 */
+            padding: 0;        /* 移除默认内边距 */
+            display: flex;     /* 使用弹性布局 */
+            gap: 30px;        /* 项目之间的间距 */
+        }
+        .interests ul li {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .interests ul li a {
+            font-size: 22px;
+            text-decoration: none;
+            color: #800080;
+            font-style: italic;
+        }
+        .interests ul li a:hover {
+            color: #9932CC;
+        }
+        .content-container {
+            margin-top: 50px;  /* 增加顶部边距 */
+        }
+        
+        /* 如果需要更大的间距，可以同时调整内容布局的上边距 */
+        .content-layout {
+            margin-top: 30px;  /* 增加内容布局的顶部边距 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <!-- 左侧区域：首页按钮和名字 -->
+            <div class="nav-left">
+                <a href="Aiden.html" class="home-btn">首页</a>
+                <div class="nav-brand">
+                    <h1>君独醉 <span>Aiden</span></h1>
+                </div>
+            </div>
+            <!-- 中间欢迎语 -->
+            <div class="welcome-text">Welcome to my story</div>
+            <!-- 右侧导航链接 -->
+            <div class="nav-links">
+                <a href="childhood.html">童年</a>
+                <a href="primary.html">小学</a>
+                <a href="junior.html">初中</a>
+                <a href="high.html">高中</a>
+                <a href="university.html">大学</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 内容容器 -->
+        <div class="content-container">
+            <!-- 页面标题 -->
+            <h1>个人简介</h1>
+            <!-- 内容布局：左侧照片，右侧个人信息 -->
+            <div class="content-layout">
+                <!-- 左侧照片框 -->
+                <div class="photo-frame">
+                    <img src="imgs/首页/首页左侧.jpg" alt="个人照片" class="photo">
+                </div>
+                <!-- 右侧个人信息 -->
+                <div class="text-content">
+                    <!-- 基本信息项 -->
+                    <div class="info-item">
+                        <span class="info-label">姓名：</span>
+                        <span class="info-value">君独醉</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">英文名：</span>
+                        <span class="info-value">Aiden</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">出生日期：</span>
+                        <span class="info-value">2005-04-12</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">生源籍贯：</span>
+                        <span class="info-value">广西灵山</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">目前身份：</span>
+                        <span class="info-value">学生</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">政治面貌：</span>
+                        <span class="info-value">群众</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">婚姻状态：</span>
+                        <span class="info-value">未婚</span>
+                    </div>
+                    <div class="interests">
+                        <h2>兴趣爱好</h2>
+                        <ul>
+                            <li><a href="photography.html">摄影</a></li>
+                            <li><a href="singing.html">唱歌</a></li>
+                            <li>羽毛球</li>
+                        </ul>
+                    </div>
+                    <!-- 座右铭（带分隔线） -->
+                    <div class="info-item motto">
+                        <span class="info-label">座右铭：</span>
+                        <span class="info-value">勇敢的人先享受世界</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页面底部：联系方式 -->
+    <footer class="contact-footer">
+        <div class="contact-container">
+            <h2>联系方式</h2>
+            <!-- 联系方式列表 -->
+            <div class="contact-items">
+                <!-- QQ联系方式 -->
+                <div class="contact-item">
+                    <i class="fab fa-qq"></i>
+                    <span>QQ: 3077713214</span>
+                </div>
+                <!-- 微信联系方式 -->
+                <div class="contact-item">
+                    <i class="fab fa-weixin"></i>
+                    <span>微信: become-desire</span>
+                </div>
+                <!-- 电话联系方式 -->
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>电话: 18897884461</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
